@@ -12,6 +12,7 @@ using SetRounding
 
 using Markdown
 
+
 using LinearAlgebra
 import LinearAlgebra: ×, dot
 export ×, dot
@@ -35,7 +36,8 @@ import Base:
     isfinite, isnan, isinf, iszero,
     show,
     isinteger, setdiff,
-    parse, hash
+    parse, hash,
+    power_by_squaring
 
 import Base:  # for IntervalBox
     broadcast, length,
