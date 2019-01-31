@@ -12,7 +12,7 @@ exp([a, b]) := [exp(a), exp(b)]
 For non-monotone functions, like the squaring function, it is more complicated:
 ```
 [a, b]^2 := [a^2, b^2]  if 0 < a < b
-          = [0, max(a^2, b^2)]  if a < 0 < b
+          = [0, max(-a, b)^2]  if a < 0 < b
           = [b^2, a^2] if a < b < 0
 ```
 We also have to round the lower endpoint down and the upper endpoint up to get guaranteed containment of the true result, since we are using floating-point arithmetic.
